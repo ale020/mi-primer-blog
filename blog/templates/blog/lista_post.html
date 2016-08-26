@@ -4,7 +4,16 @@
 	<title>Hola blog</title>
 </head>
 <body>
-<p>Hola a todos!</p>
-<p>Esta Trabajando!!</p>
+<h1>Django</h1>
+{% for post in posts %}
+<div>
+	<h1>{{ post }}</h1>
+	<p> Fecha publicada: {{ post.fecha_creada }}</p>
+	<p>Publicado por: {{ post.autor }} </p>
+	<p ><em>{{ post.texto|linebreaksbr }}</em></p>
+
+
+</div>
+{% endfor %}
 </body>
 </html>
